@@ -12,6 +12,7 @@ set-up-project:
     @find . -type d -name ".git" -exec rm -rf {} +
     @bun install @trivago/prettier-plugin-sort-imports prettier
     @python3 scripts/init_readme.py
+    @python3 scripts/init_back_end.py
     @git init
 
 # Create a new Bun package
