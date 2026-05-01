@@ -1,8 +1,8 @@
 default:
     @just --list
 
-# Set-up my local machine
-set-up:
+# Set up project scaffolding on local machine
+set-up-project:
     @python3 scripts/init_bun_workspace.py
     @bun create next-app@latest front-end --default
     @bun init back-end --yes
@@ -11,7 +11,7 @@ set-up:
     @cd infra/aws && cdk init app --language=typescript
     @find . -type d -name ".git" -exec rm -rf {} +
     @bun install @trivago/prettier-plugin-sort-imports prettier
-    @rm README.md
+    @python3 scripts/init_readme.py
     @git init
 
 # Create a new Bun package
