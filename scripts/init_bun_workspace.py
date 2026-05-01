@@ -3,8 +3,8 @@ import subprocess
 
 def main():
     project_name = input("Please enter your project name: ")
-    subprocess.run(["touch", "project.txt"])
-    with open("project.txt", "w") as f:
+    subprocess.run(["touch", "./scripts/project.txt"])
+    with open("./scripts/project.txt", "w") as f:
         f.write(f"PROJECT_NAME={project_name}\n")
     subprocess.run(["bun", "init", "--yes"])
     subprocess.run(["rm", "-rf", "tsconfig.json", "CLAUDE.md", ".cursor"])
