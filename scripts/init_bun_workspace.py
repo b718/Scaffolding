@@ -15,7 +15,7 @@ def main():
         package_content["scripts"]["format"] = "prettier --write \"**/*.{ts,tsx,js,mjs}\" --ignore-path .prettierignore"
         package_content["type"] = "module"
         package_content["workspaces"] = ["front-end", "back-end", "packages/*"]
-        package_content["name"] = f"@{project_name}"
+        package_content["name"] = project_name
  
         """Bring to the start of the file delete everything before rewrite"""
         file.seek(0)
