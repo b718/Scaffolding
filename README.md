@@ -18,8 +18,7 @@ Whenever I want to build a new project, I always spent a bit of time setting up 
 ### Usage
 
 ```bash
-git clone https://github.com/your-username/Set-up my-project
-cd my-project
+git clone https://github.com/b718/set-up.git .
 just set-up
 ```
 
