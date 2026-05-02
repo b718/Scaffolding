@@ -4,6 +4,7 @@ def main():
     back_end_path = "./back-end"
     write_justfile(back_end_path)
     update_package_json(back_end_path)
+    update_claude_instructions(back_end_path)
 
 def write_justfile(back_end_path: str) -> None:
     justfile_content = (
@@ -28,6 +29,16 @@ def update_package_json(back_end_path: str) -> None:
         file.seek(0)
         file.truncate()
         json.dump(package_content, file, indent=2)
+
+def update_claude_instructions(back_end_path: str) -> None:
+    content = (
+        "## Styling\n"
+        "\n"
+        "- For logging, always use `pino`.\n"
+        "- When creating try-catches, always use `err` as the variable name for the error.\n"
+    )
+    with open(f"{back_end_path}/CLAUDE.md", "a") as f:
+        f.write(content)
 
 if __name__ == "__main__":
     main()
