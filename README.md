@@ -18,7 +18,7 @@ Whenever I want to build a new project, I always spent a bit of time setting up 
 ### Usage
 
 ```bash
-git clone https://github.com/b718/set-up.git .
+git clone https://github.com/b718/Scaffolding.git .
 just set-up
 ```
 
