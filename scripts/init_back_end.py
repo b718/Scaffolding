@@ -36,6 +36,7 @@ def update_claude_instructions(back_end_path: str) -> None:
         "\n"
         "- For logging, always use `pino`.\n"
         "- When creating try-catches, always use `err` as the variable name for the error.\n"
+        "- Always use `response` instead of `res` when naming API responses.\n"
     )
     with open(f"{back_end_path}/CLAUDE.md", "a") as f:
         f.write(content)
