@@ -13,8 +13,13 @@ set-up-project:
     @bun install @trivago/prettier-plugin-sort-imports prettier
     @python3 scripts/init_readme.py
     @python3 scripts/init_back_end.py
+    @python3 scripts/init_front_end.py
     @git init
 
 # Create a new Bun package
 create-package:
-    @cd scripts && python3 create_package.py
+    @python3 ./scripts/create_package.py
+
+# Format Project
+format:
+    @bun run format
