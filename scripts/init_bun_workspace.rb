@@ -19,4 +19,6 @@ def init_bun_workspace
   package_content['name'] = project_name
 
   File.write('package.json', JSON.pretty_generate(package_content))
+
+  system('bun install @trivago/prettier-plugin-sort-imports prettier')
 end

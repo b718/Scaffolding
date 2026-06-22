@@ -7,7 +7,6 @@ set-up-project:
     @mkdir -p infra/aws
     @cd infra/aws && cdk init app --language=typescript
     @find . -type d -name ".git" -exec rm -rf {} +
-    @bun install @trivago/prettier-plugin-sort-imports prettier
     @git init
 
 # Create a new Bun package
