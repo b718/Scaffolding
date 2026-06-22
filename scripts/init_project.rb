@@ -19,6 +19,15 @@ def prompt_selection
   end
 end
 
+def prompt_project_name
+  print 'Please enter your project name: '
+  project_name = gets.chomp.strip
+
+  File.write('./scripts/project.txt', "PROJECT_NAME=#{project_name}\n")
+end
+
+prompt_project_name
+
 case prompt_selection
 when 'Ruby'
   Ruby.new.set_up_back_end

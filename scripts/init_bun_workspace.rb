@@ -2,11 +2,6 @@ require 'json'
 require_relative 'back_end/programming_language'
 
 def init_bun_workspace
-  print 'Please enter your project name: '
-  project_name = gets.chomp.strip
-
-  File.write('./scripts/project.txt', "PROJECT_NAME=#{ProgrammingLanguage::BACK_END_PATH}\n")
-
   system('bun init --yes')
   system('rm -rf tsconfig.json CLAUDE.md .cursor')
 
